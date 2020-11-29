@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dhanoshmichaelpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dhanoshmichaelpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: dhanoshmichaelpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: dhanoshmichaelpipelinesjavascriptdocker 
+          image: partsunlimitedacr999.azurecr.io/dhanoshmichaelpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
